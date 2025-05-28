@@ -16,3 +16,9 @@ if (count === 5){
     alert("Your profile has gained 10 followers! Keep it up");
 }
 }
+
+function resetCount(){
+    count = 0;
+    alert("The followers' count has been reset.");
+    document.getElementById("countDisplay").innerHTML = 0;
+}
