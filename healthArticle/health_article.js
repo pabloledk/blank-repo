@@ -50,9 +50,9 @@ xhr.onload = function() {
 
 var xhr2 = new XMLHttpRequest();
 var url2 = './news_article.json';
-xhr2.open('GET', url, true);
+xhr2.open('GET', url2, true);
 xhr2.responseType = 'json';
-alert(xhr2.status);
+alert(xhr.status);
 xhr2.onload = function() { 
     var news = xhr2.response.news;
     var newsDiv = document.getElementById('news');
