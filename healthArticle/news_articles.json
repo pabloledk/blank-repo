@@ -1,0 +1,17 @@
+{
+    "news": [
+      {
+        "title": "Title of the new 1",
+        "description": "This article is numero 1"
+      },
+      {
+        "title": "Title of the new 2",
+        "description": "This article is numero 2"
+      },
+      {
+        "title": "Title of the new 3",
+        "description": "This article is numero 3"
+      }
+    ]
+}
+  

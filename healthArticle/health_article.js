@@ -3,7 +3,6 @@ var url = './health_article.json';
 xhr.open('GET', url, true);
 xhr.responseType = 'json';
 xhr.onload = function() { 
-    alert("aloja");
     var articles = xhr.response.articles;
     var articlesDiv = document.getElementById('articles');
 
@@ -48,5 +47,31 @@ xhr.onload = function() {
       
     });
 }
-    xhr.send();
+
+var xhr2 = new XMLHttpRequest();
+var url2 = './news_article.json';
+xhr2.open('GET', url, true);
+xhr2.responseType = 'json';
+alert("hola");
+xhr2.onload = function() { 
+    var news = xhr2.response.news;
+    var newsDiv = document.getElementById('news');
     
+    news.forEach(function(new1) {
+      var newDiv = document.createElement('div');
+      newDiv.classList.add('new1');
+
+      var newtitle = document.createElement('h2');
+      newtitle.textContent = new1.title;
+
+      var newdescription = document.createElement('p');
+      newdescription.textContent = new1.description;
+      
+      newDiv.appendChild(newtitle);
+      newDiv.appendChild(newdescription);
+
+      newsDiv.appendChild(newDiv);
+    });
+}
+    xhr.send();
+    xhr2.send();
