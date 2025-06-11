@@ -52,17 +52,19 @@ var xhr2 = new XMLHttpRequest();
 var url2 = './news_article.json';
 xhr2.open('GET', url, true);
 xhr2.responseType = 'json';
-alert("hola");
+alert(xhr2.status);
 xhr2.onload = function() { 
     var news = xhr2.response.news;
     var newsDiv = document.getElementById('news');
-    
+
     news.forEach(function(new1) {
-      var newDiv = document.createElement('div');
+    
+        var newDiv = document.createElement('div');
       newDiv.classList.add('new1');
 
       var newtitle = document.createElement('h2');
       newtitle.textContent = new1.title;
+      
 
       var newdescription = document.createElement('p');
       newdescription.textContent = new1.description;
